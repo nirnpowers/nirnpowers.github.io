@@ -44,6 +44,8 @@
 			tms: false,
 			noWrap: true,
         });
+	    
+	     var polygons = L.layerGroup([polygon1, polygon2]);
 		
 		var baseMaps = {
 			"Nations": nations,
@@ -152,7 +154,6 @@
 		    fillColor: '#51A033'
 	    });
 	    
-	    var polygons = L.layerGroup([polygon1, polygon2]);
 	    
 		/*List of Markers*/
 		/* reference http://harrywood.co.uk/maps/examples/leaflet/marker-array.view.html */
