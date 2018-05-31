@@ -48,6 +48,10 @@
 		var baseMaps = {
 			"Nations": nations,
 		};
+	    
+	    var overlayMaps = {
+			"Polygons": polygons,
+		};
 	
 		/* MAP */
 		var map = L.map('map', {
@@ -148,12 +152,18 @@
 		    fillColor: '#51A033'
 	    });
 	    
-	    var overlay = L.polygon
-	    var overlayMaps = {
-			"overlay": overlay,
-		};
-	    
 	    var polygons = L.layerGroup([polygon1, polygon2]);
+	    
+	    L.control.layers(baseMaps, overlayMaps).addTo(map);
+	    
+	    var baseMaps = {
+    "Nations": nations,
+	    };
+
+var overlayMaps = {
+    "Polygons": polygons
+};
+	     L.control.layers(baseMaps, overlayMaps).addTo(map);
 	    
 		/*List of Markers*/
 		/* reference http://harrywood.co.uk/maps/examples/leaflet/marker-array.view.html */
