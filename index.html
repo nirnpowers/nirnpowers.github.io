@@ -53,7 +53,7 @@
 		var map = L.map('map', {
 			center: [50.85, -8.04],
 			zoom: 2,
-			layers: [nations]
+			layers: [nations, polygons]
 		});
 	
 		/* This adds a layer control to the top right */
@@ -152,6 +152,8 @@
 	    var overlayMaps = {
 			"overlay": overlay,
 		};
+	    
+	    var polygons = L.layerGroup([polygon1, polygon2]);
 	    
 		/*List of Markers*/
 		/* reference http://harrywood.co.uk/maps/examples/leaflet/marker-array.view.html */
